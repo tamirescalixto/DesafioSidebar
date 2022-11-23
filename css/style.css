@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+    --light-grey: #dce4e3;
+    --text-color: #084236;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--light-grey);
+}
+
+div.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.textDashboard {
+    margin: 18px 0 0 0;
+}
+
+div.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background: var(--green);
+    width: 250px;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 78px;
+}
+
+.logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.sidebar.active .logo {
+    opacity: 0;
+}
+
+.menuHamburger {
+    position: absolute;
+    left: 212px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .menuHamburger {
+    width: 24px;
+    height: 24px;
+    left: 27px;
+    top: 26px;
+}
+
+div.itemMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 119px;
+    padding: 24px 0 26px 29px;
+}
+
+div.searchBox {
+    width: 222px;
+    height: 50.92px;
+    border-radius: 12px;
+    background: var(--light-green);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 13px;
+    padding: 13px;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+}
+
+.searchBox input {
+    border: none;
+    background: none;
+    outline: none;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: var(--text-color);
+}
+
+.searchBox ::placeholder {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: var(--text-color);
+}
+
+.sidebar.active .searchBox ::placeholder {
+    opacity: 0;
+}
+
+.sidebar.active .searchBox {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 14px;
+    top: 76px;
+    background: #DCE4E3;
+    border-radius: 12px;
+    position: absolute;
+}
+
+.sidebarList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 34px;
+    list-style: none;
+    padding: 20.08px 0 0 27px;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.sidebar .linkText {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar.active .linkText {
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.sidebar.active .naveList {
+    padding: 42px 0 0 0;
+}
+
+.linkText {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    border-radius: 12px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+div.profileBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 251px;
+    height: 60px;
+    padding: 0 0 0 14px;
+    background: var(--light-green);
+    margin-top: 305px;
+    transition: all 0.5s ease;
+}
+
+.imgProfile {
+    border-radius: 12px;
+}
+
+div.textProfile {
+    display: flex;
+    flex-direction: column;
+    padding: 0 47px 0 9px;
+}
+
+.nameProfile {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.occupationProfile {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.sidebar.active .profileBox {
+    width: 79px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .profileBox .imgProfile {
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.sidebar.active .profileBox .textProfile {
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.sidebar.active .iconLogout {
+    position: absolute;
+    padding: 0 0 0 10px;
+    transition: all 0.5s ease;
+}
