@@ -96,6 +96,7 @@ div.searchBox {
     border: none;
     background: none;
     outline: none;
+    width: 150px;
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 15px;
